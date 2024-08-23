@@ -31,6 +31,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
+  console.log('\n** ---  postData  --- **\n\n', postData) // wsp-log
   return {
     props: {
       postData,
